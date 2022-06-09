@@ -1,0 +1,30 @@
+{
+  "name": "birthday_cal",
+  "version": "1.0.0",
+  "description": "prdxn-dev-framework\r ===================",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdhanrajaxioned/birthday_cal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sdhanrajaxioned/birthday_cal/issues"
+  },
+  "homepage": "https://github.com/sdhanrajaxioned/birthday_cal#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.52.3"
+  },
+  "dependencies": {
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-minify": "^3.1.0"
+  }
+}
