@@ -1,6 +1,5 @@
 let jsonData = [],
   birthDates = [],
-  personObj = [],
   days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   
 
@@ -12,6 +11,7 @@ const yearField = document.getElementById('year-field'),
 
 birthDayDiv.forEach((div) => div.innerHTML = '');
 
+//function to get data from json
 const getData = () => {
   fetch('assets/json/got-characters-birthday.json')
     .then(response => response.json())
@@ -19,7 +19,9 @@ const getData = () => {
 }
 getData();
 
+// function to create person obj with name and birthday
 function createPersonObj() {
+  let personObj = [];
   jsonData.forEach((person) => {
     let name = person.name,
       matches = name.match(/\b(\w)/g),
@@ -34,14 +36,17 @@ function createPersonObj() {
     };
     personObj.push(obj);
   })
-  displayBirthdays();
+  displayBirthdays(personObj);
 }
 
-const displayBirthdays = () => {
+//function to display data on DOM
+const displayBirthdays = (personObj) => {
+  birthDayDiv.innerHTML = '';
   personObj.forEach((person) => {
     let randomColor = Math.floor(Math.random()*16777215).toString(16);
     let birthDay = person.birthDay.toLowerCase();
     listItems.forEach(function(li) {
+      birthDayDiv.innerHTML = '';
       let listItemsId = li.id.toLocaleLowerCase();
       if(listItemsId === birthDay){
         let span = document.createElement('span'),
