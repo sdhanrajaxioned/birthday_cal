@@ -1,32 +1,62 @@
-<!doctype html>
-<html lang="en"> 
-    <head>
-        <meta charset="utf-8">
-        <title>Client</title>
-        <meta name="description" lang="en" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link rel="shortcut icon" href="favicon.ico" />
-        <link rel="stylesheet" media="screen" href="assets/vendor/font-awesome/css/all.min.css" >
-        <link rel="stylesheet" media="screen" href="assets/css/style.css" >
-    </head>
-    <body>
-        <!--container start-->
-        <div class="container">
-            <!--header section start-->
-            <header>
-            </header>
-            <!--header section ends-->
-            <!--main section start-->
-            <main>
-            </main>
-            <!--main section end-->
-            <!--footer section start-->
-            <footer>      
-            </footer>
-            <!--footer section end-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Birthday Cal</title>
+    <meta name="description" lang="en" content="" />
+    <metaname="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <script src="https://kit.fontawesome.com/ac77fb1b0f.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" media="screen" href="assets/vendor/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" media="screen" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!--container start-->
+    <div class="container">
+      <!--main section start-->
+      <main>
+        <h1 class="title">Birthday Cal</h1>
+        <ul class="birthday-cal">
+          <li class="day" id="mon">
+            <h2>Mon</h2>
+          </li>
+          <li class="day" id="tue">
+            <h2>Tue</h2>
+          </li>
+          <li class="day" id="wed">
+            <h2>Wed</h2>
+          </li>
+          <li class="day" id="Thu">
+            <h2>Wec</h2>
+          </li>
+          <li class="day" id="Fri">
+            <h2>Fri</h2>
+          </li>
+          <li class="day" id="Sat">
+            <h2>Sat</h2>
+          </li>
+          <li class="day" id="Sun">
+            <h2>Sun</h2>
+          </li>
+        </ul>
+        <div class="form-container">
+          <form method="GET" class="birthdate-form">
+            <div class="formgroup textarea-formgroup">
+              <textarea  id="birth-dates-textarea" rows="15"></textarea>
+            </div>
+            <div class="right-content">
+              <div class="formgroup ">
+                <label for="year">Year</label>
+                <input type="number" name="" maxlength="4" min="0" id="year" />
+              </div>
+              <button type="submit" class="update-btn" id="update-btn">Update</button>
+            </div>
+          </form>
         </div>
-        <!--container end-->
-        <script>
-        </script>
-    </body>
+      </main>
+      <!--main section end-->
+    </div>
+    <!--container end-->
+    <script src="assets/vendor/script.js"></script>
+  </body>
 </html>
