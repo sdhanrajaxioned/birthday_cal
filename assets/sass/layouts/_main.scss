@@ -1,0 +1,32 @@
+main {
+  min-height: 100vh;
+  background-color: map-get($colors, background-clr);
+  .wrapper {
+    .title {
+      padding-bottom: 30px;
+      font-size: 30px;
+      color: map-get($colors, title-clr);
+      text-align: center;
+    }
+  
+    .birthday-cal {
+      @include flexbox();
+  
+      .day {
+        flex-basis: 13.28%;
+        margin-right: 1%;
+  
+        &:last-child { margin-right: 0;}
+
+        h2 {
+          padding: 8px;
+          background-color: map-get($colors, day-bg);
+          color: map-get($colors, white);
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
