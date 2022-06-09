@@ -50,15 +50,15 @@ main {
         @at-root
         .right-content {
           flex-basis: 40%;
+          
+          label { 
+            display: block;
+            color: map-get($colors, title-clr);
+            font-size: 18px;
+          }
 
           .formgroup {
             max-width: 220px;
-
-            label { 
-              display: block;
-              color: map-get($colors, title-clr);
-              font-size: 18px;
-            }
 
             @at-root
             .year-field {
