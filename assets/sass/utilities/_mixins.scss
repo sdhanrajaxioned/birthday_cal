@@ -128,3 +128,31 @@
     } 
   }
 }
+
+// mixin to give hover effect only on desktops
+@mixin  hover-effects() {
+  @media screen and (min-width: 768px) {
+    @content;
+    @include transition-effect();
+  }
+}
+
+//mixin for transition effects
+@mixin transition-effect() {
+  @content;
+  -webkit-transition: .4s ease-in; 
+  -o-transition: .4s ease-in;  
+  transition: .4s ease-in;
+}
+
+//for btn
+@mixin btn($bg-clr,$clr,$size) {
+  border: none;
+  border-radius: 5px;
+  background-color: $bg-clr;
+  color: $clr;
+  font-size: $size;
+  outline: none;
+  @content;
+}
+

@@ -1,6 +1,7 @@
 main {
   min-height: 100vh;
   background-color: map-get($colors, background-clr);
+  
   .wrapper {
     .title {
       padding-bottom: 30px;
@@ -25,6 +26,51 @@ main {
           border-top-left-radius: 5px;
           border-top-right-radius: 5px;
           text-align: right;
+        }
+      }
+    }
+
+    .form-container {
+      padding-top: 30px;
+
+      .birthdate-form {
+        @include flexbox();
+        @include justify-content(space-between);
+
+        .textarea-formgroup {
+          flex-basis: 58%;
+
+          .birth-dates-textarea{
+            width: 100%;
+            border-radius: 5px;
+            border-color: map-get($colors, border-clr);
+          }
+        }
+
+        @at-root
+        .right-content {
+          flex-basis: 40%;
+
+          .formgroup {
+            max-width: 220px;
+
+            label { 
+              display: block;
+              color: map-get($colors, title-clr);
+              font-size: 18px;
+            }
+
+            @at-root
+            .year-field {
+              width: 100%;
+              padding: 10px 5px;
+              margin: 10px 0 20px;
+              border: 1px solid map-get($colors, border-clr);
+              border-radius: 5px;
+              outline: none;
+            }
+          }
+
         }
       }
     }
