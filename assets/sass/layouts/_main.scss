@@ -27,6 +27,20 @@ main {
           border-top-right-radius: 5px;
           text-align: right;
         }
+
+        .birthDays {
+          @include flexbox();
+          flex-wrap: wrap;
+          min-height: 150px;
+          background-color: map-get($colors, white);
+          text-align: center;
+
+          span {
+            padding: 25px;
+            flex-grow: 1;
+            flex: 1;
+          }
+        }
       }
     }
 
@@ -70,7 +84,6 @@ main {
               outline: none;
             }
           }
-
         }
       }
     }
